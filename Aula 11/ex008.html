@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Origem</title>
+    <style>
+        body{
+            color:white;
+            background-color: rgb(88, 88, 151);
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo a origem</h1>
+    Digite o seu país <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Enviar" onclick="origem()">
+    <div id='res'> 
+
+    </div>
+    <script>
+        function origem(){
+            var txtp=document.querySelector('input#txtpais')
+            var res=document.getElementById('res')
+            if(txtp.value=='Brasil'){
+                res.innerHTML+=`<p>Você é brasileiro.</p>`
+           }
+           else{
+               res.innerHTML+=`<p>Você é estrangeiro.</p>`
+           }
+        }
+
+    </script>
+</body>
+</html>
